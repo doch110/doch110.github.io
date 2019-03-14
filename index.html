@@ -1,1 +1,48 @@
-德玛西亚
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>vu</title>
+    <script src="./lib/vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="one" >
+        <select v-model="ad">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" v-model="two">
+        <input type="button" value="=" @click="res">
+        <input type="text" v-model="three">
+    </div>
+
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                one:0,
+                two:0,
+                three:0,
+                ad:'-'
+            },
+            methods: {
+                res(){
+                    switch(this.ad){
+                        case('+'):this.three = parseInt(this.one)+parseInt(this.two);break;
+                        case('-'):this.three = parseInt(this.one)-parseInt(this.two);break;
+                        case('*'):this.three = parseInt(this.one)*parseInt(this.two);break;
+                        case('/'):this.three = parseInt(this.one)/parseInt(this.two);break;
+                    }
+                    
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
