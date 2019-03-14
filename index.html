@@ -7,42 +7,16 @@
     <script src="./lib/vue.min.js"></script>
 </head>
 
-<body>
-    <div id="app">
-        <input type="text" v-model="one" >
-        <select v-model="ad">
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value="*">*</option>
-            <option value="/">/</option>
-        </select>
-        <input type="text" v-model="two">
-        <input type="button" value="=" @click="res">
-        <input type="text" v-model="three">
-    </div>
-
-    <script type="text/javascript">
-        var vm = new Vue({
-            el: '#app',
-            data: {
-                one:0,
-                two:0,
-                three:0,
-                ad:'-'
-            },
-            methods: {
-                res(){
-                    switch(this.ad){
-                        case('+'):this.three = parseInt(this.one)+parseInt(this.two);break;
-                        case('-'):this.three = parseInt(this.one)-parseInt(this.two);break;
-                        case('*'):this.three = parseInt(this.one)*parseInt(this.two);break;
-                        case('/'):this.three = parseInt(this.one)/parseInt(this.two);break;
-                    }
-                    
-                }
-            }
-        });
-    </script>
+<body text=#ff0000 bgcolor=#ccff99>
+<marquee>请进入音乐休闲屋</marquee>
+<marquee direction=left>看我还会动呢,并且是从右向左移动
+</marquee> <p>
+<marquee direction =right behavior=scroll>我从左向右一圈一圈的移动
+</marquee > <p>
+<marquee scrollamount=18>我是不是移动的比较快？
+</marquee> <P>
+<marquee loop=3 bgcolor=blue>我的底色是蓝的，我循环三次即停止移动
+</marquee > <p>
 </body>
 
 </html>
